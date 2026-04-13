@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Análise técnica e consultoria de SEO para Core Reabilitação & Performance - Fisioterapia no Portal do Morumbi" />
+  <meta name="keywords" content="Core Fisioterapia, Consultoria SEO, Análise Técnica, Reabilitação Esportiva, Portal do Morumbi" />
+  <title>Core Reabilitação & Performance | Consultoria de Presença Digital e SEO</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* ========== CSS VARIABLES ========== */
+    :root {
+      /* Cores Primárias */
+      --primary-color: #030012;
+      --primary-dark: #000000;
+      --primary-light: #1a1a2e;
+      --secondary-color: #95ef4f;
+      --accent-color: #f59e0b;
+      --danger-color: #ef4444;
+      
+      /* Backgrounds */
+      --bg-color: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-dark: #0f172a;
+      
+      /* Textos */
+      --text-primary: #1e293b;
+      --text-secondary: #64748b;
+      --border-color: #e2e8f0;
+      
+      /* Sombras */
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+      
+      /* Espaçamentos */
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      --spacing-2xl: 4rem;
+      
+      /* Tipografia */
+      --font-family: "Inter", -apple-system, sans-serif;
+    }
+
+    /* ========== RESET & BASE ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-primary);
+      background: var(--bg-color);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* InnovaSfera Watermark - Subtle */
+    body::before {
+      content: "";
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 500px;
+      height: 500px;
+      background-image: url('logo-large.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      user-select: none;
+      filter: blur(3px);
+      z-index: 0;
+      transform: rotate(-5deg);
+      opacity: 0.03;
+    }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--primary-color);
+    }
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; }
+
+    p {
+      margin-bottom: var(--spacing-md);
+      color: var(--text-secondary);
+      font-size: 1.125rem;
+    }
+
+    strong {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    /* ========== LAYOUT ========== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+
+    .section {
+      padding: var(--spacing-2xl) 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-alt {
+      background: var(--bg-secondary);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* ========== HEADER ========== */
+    .header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+      color: white;
+      padding: var(--spacing-lg) 0;
+      box-shadow: var(--shadow-lg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-title {
+      font-size: 1.5rem;
+      margin: 0;
+      color: var(--secondary-color);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-light) 100%);
+      color: white;
+      padding: var(--spacing-2xl) 0;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(149, 239, 79, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 3.5rem;
+      margin-bottom: var(--spacing-md);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-xl);
+      font-weight: 300;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-xl);
+      flex-wrap: wrap;
+      margin-top: var(--spacing-xl);
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: var(--spacing-lg);
+      border-radius: 12px;
+      min-width: 180px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s;
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--secondary-color);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 400;
+    }
+
+    /* ========== HERO INSIGHTS (pontos positivos e críticos) ========== */
+    .hero-insights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .insight-card {
+      border-radius: 12px;
+      padding: var(--spacing-md);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+      border: 1px solid transparent;
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.3s;
+    }
+
+    .insight-card.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .insight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Positivo */
+    .insight-card.positive {
+      background: rgba(149, 239, 79, 0.12);
+      border-color: rgba(149, 239, 79, 0.35);
+    }
+
+    .insight-card.positive .insight-icon {
+      color: #95ef4f;
+    }
+
+    /* Crítico */
+    .insight-card.critical {
+      background: rgba(239, 68, 68, 0.12);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .insight-card.critical .insight-icon {
+      color: #f87171;
+    }
+
+    .insight-icon {
+      font-size: 1.4rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .insight-content {
+      text-align: left;
+    }
+
+    .insight-title {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .insight-card.positive .insight-title {
+      color: #95ef4f;
+    }
+
+    .insight-card.critical .insight-title {
+      color: #f87171;
+    }
+
+    .insight-text {
+      display: block;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* delay escalonado para cada card */
+    .insight-card:nth-child(1) { transition-delay: 0.05s; }
+    .insight-card:nth-child(2) { transition-delay: 0.15s; }
+    .insight-card:nth-child(3) { transition-delay: 0.25s; }
+    .insight-card:nth-child(4) { transition-delay: 0.35s; }
+    .insight-card:nth-child(5) { transition-delay: 0.45s; }
+
+    @media (max-width: 768px) {
+      .hero-insights {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========== CARDS ========== */
+    .card {
+      background: white;
+      padding: var(--spacing-lg);
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--secondary-color), #7dd74f);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: var(--primary-dark);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .card h3,
+    .card h4 {
+      margin-bottom: var(--spacing-md);
+      color: var(--primary-color);
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    /* ========== GRID ========== */
+    .grid {
+      display: grid;
+      gap: var(--spacing-lg);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ========== LISTS ========== */
+    .feature-list {
+      list-style: none;
+      margin: var(--spacing-lg) 0;
+    }
+
+    .feature-list li {
+      padding: var(--spacing-sm) 0 var(--spacing-sm) var(--spacing-xl);
+      position: relative;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .feature-list li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-size: 1.25rem;
+    }
+
+    .keyword-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: var(--spacing-sm);
+      margin: var(--spacing-lg) 0;
+    }
+
+    .keyword-list li {
+      background: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-left: 3px solid var(--secondary-color);
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      font-size: 1rem;
+      color: var(--text-primary);
+      transition: all 0.3s;
+    }
+
+    .keyword-list li:hover {
+      transform: translateX(5px);
+      border-left-width: 5px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ========== ALERTS ========== */
+    .alert {
+      display: flex;
+      gap: var(--spacing-md);
+      padding: var(--spacing-lg);
+      border-radius: 8px;
+      margin: var(--spacing-lg) 0;
+      align-items: flex-start;
+    }
+
+    .alert i {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .alert-info {
+      background: #dbeafe;
+      border-left: 4px solid #3b82f6;
+      color: #1e40af;
+    }
+
+    .alert-success {
+      background: #d1fae5;
+      border-left: 4px solid var(--secondary-color);
+      color: #065f46;
+    }
+
+    .alert-warning {
+      background: #fef3c7;
+      border-left: 4px solid var(--accent-color);
+      color: #92400e;
+    }
+
+    .alert-danger {
+      background: #fee2e2;
+      border-left: 4px solid var(--danger-color);
+      color: #991b1b;
+    }
+
+    /* ========== ACCORDION ========== */
+    .accordion-module {
+      background: white;
+      border-radius: 12px;
+      margin-bottom: var(--spacing-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .accordion-module:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+      padding: var(--spacing-lg);
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--bg-secondary), white);
+      transition: all 0.3s;
+    }
+
+    .accordion-header:hover {
+      background: var(--bg-secondary);
+    }
+
+    .module-icon-large {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--secondary-color);
+      flex-shrink: 0;
+    }
+
+    .module-title-area {
+      flex-grow: 1;
+    }
+
+    .module-title-area h3 {
+      margin: 0 0 var(--spacing-xs) 0;
+      color: var(--primary-color);
+    }
+
+    .module-title-area p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .accordion-chevron {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      transition: transform 0.3s;
+    }
+
+    .accordion-module.active .accordion-chevron {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .accordion-module.active .accordion-content {
+      max-height: 3000px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    .accordion-body {
+      padding: var(--spacing-lg);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .accordion-body h4 {
+      color: var(--primary-color);
+      margin: var(--spacing-md) 0;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+
+    .accordion-body h4::before {
+      content: "\f0da";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--secondary-color);
+    }
+
+    /* ========== COMPARISON ========== */
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      margin: var(--spacing-xl) 0;
+    }
+
+    .problem-column,
+    .solution-column {
+      padding: var(--spacing-lg);
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .problem-column {
+      background: linear-gradient(135deg, #fee2e2, #fecaca);
+      border-left: 4px solid var(--danger-color);
+    }
+
+    .solution-column {
+      background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .problem-column h4 {
+      color: #991b1b;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .solution-column h4 {
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .problem-list,
+    .solution-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .problem-list li,
+    .solution-list li {
+      padding: var(--spacing-sm) 0 var(--spacing-sm) var(--spacing-xl);
+      position: relative;
+    }
+
+    .problem-list li::before {
+      content: "\f00d";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--danger-color);
+    }
+
+    .solution-list li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #059669;
+    }
+
+    /* ========== PROGRESS BAR ========== */
+    .progress-bar-container {
+      margin: var(--spacing-md) 0;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: var(--spacing-xs);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      background: var(--bg-secondary);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-fill {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: var(--spacing-sm);
+      color: white;
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Contador de pontuação */
+    .score-counter {
+      display: inline-block;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .score-counter.score-done {
+      animation: scorePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes scorePop {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    .progress-excellent {
+      background: linear-gradient(90deg, #059669, var(--secondary-color));
+    }
+
+    .progress-good {
+      background: linear-gradient(90deg, #0284c7, #3b82f6);
+    }
+
+    .progress-moderate {
+      background: linear-gradient(90deg, #ea580c, var(--accent-color));
+    }
+
+    .progress-poor {
+      background: linear-gradient(90deg, #dc2626, var(--danger-color));
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: linear-gradient(135deg, #000000, #030012, #1a1a2e);
+      color: white;
+      padding: var(--spacing-2xl) 0 var(--spacing-lg);
+      position: relative;
+      z-index: 1;
+      margin-top: var(--spacing-2xl);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+      color: var(--secondary-color);
+      margin-bottom: var(--spacing-md);
+      font-size: 1.125rem;
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: var(--spacing-xs);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background: var(--secondary-color);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: var(--spacing-lg);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-bottom p {
+      margin-bottom: var(--spacing-xs);
+      font-size: 0.95rem;
+    }
+
+    .footer-badge {
+      margin-top: var(--spacing-sm);
+      font-size: 0.875rem;
+    }
+
+    .footer-badge strong {
+      color: var(--secondary-color);
+      margin-left: 0.25rem;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: var(--secondary-color);
+      color: var(--primary-dark);
+    }
+
+    .btn-secondary:hover {
+      background: #7dd74f;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.75rem; }
+      h3 { font-size: 1.5rem; }
+      
+      .hero h1 { font-size: 2.25rem; }
+      .hero .subtitle { font-size: 1.125rem; }
+      
+      .comparison-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+      
+      .accordion-header {
+        padding: var(--spacing-md);
+      }
+      
+      .module-icon-large {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+      }
+      
+      body::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .stat-card {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .keyword-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-section p {
+        justify-content: center;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+    }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-area">
+        <img src="logo-large.svg" alt="Consultoria Core Reabilitação & Performance Logo" class="logo-img" />
+        <h1 class="header-title">Consultoria Core Reabilitação & Performance</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center">
+      <h1>Consultoria de Presença Digital e SEO</h1>
+      <p class="subtitle">Análise técnica completa e estratégias para ampliar o alcance da Core Fisioterapia através do site & Google</p>
+      
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number">5ª</span>
+          <span class="stat-label">Posição no Google (Local)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">93/100</span>
+          <span class="stat-label">Performance</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">~1</span>
+          <span class="stat-label">Visita convertida por semana</span>
+        </div>
+      </div>
+
+      <!-- Pontos Positivos e Críticos -->
+      <div class="hero-insights" id="heroInsights">
+
+        <!-- Positivo 1 -->
+        <div class="insight-card positive">
+          <span class="insight-icon"><i class="fas fa-check-circle"></i></span>
+          <div class="insight-content">
+            <span class="insight-title">Ponto Positivo</span>
+            <span class="insight-text">Site rápido e bem otimizado — 93/100 em performance garante boa experiência ao usuário e menor taxa de abandono.</span>
+          </div>
+        </div>
+
+        <!-- Positivo 2 -->
+        <div class="insight-card positive">
+          <span class="insight-icon"><i class="fas fa-check-circle"></i></span>
+          <div class="insight-content">
+            <span class="insight-title">Ponto Positivo</span>
+            <span class="insight-text">Já na 1ª página do Google — estar na 5ª posição é uma vantagem competitiva real, especialmente em buscas locais no Portal do Morumbi.</span>
+          </div>
+        </div>
+
+        <!-- Crítico 1 -->
+        <div class="insight-card critical">
+          <span class="insight-icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <div class="insight-content">
+            <span class="insight-title">Ponto Crítico</span>
+            <span class="insight-text">Apenas ~1 visita convertida por semana — o posicionamento ainda não se converte em tráfego real. Otimizações de SEO são urgentes para mudar esse cenário.</span>
+          </div>
+        </div>
+
+        <!-- Crítico 2 -->
+        <div class="insight-card critical">
+          <span class="insight-icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <div class="insight-content">
+            <span class="insight-title">Ponto Crítico</span>
+            <span class="insight-text">Best Practices em 54/100 — vulnerabilidades técnicas e padrões desatualizados podem penalizar o site nos algoritmos do Google e comprometer a segurança.</span>
+          </div>
+        </div>
+
+        <!-- Crítico 3 -->
+        <div class="insight-card critical">
+          <span class="insight-icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <div class="insight-content">
+            <span class="insight-title">Ponto Crítico</span>
+            <span class="insight-text">SEO em 82/100 com palavras-chave estratégicas inexploradas — concorrentes podem ganhar espaço enquanto buscas com alto potencial de conversão ficam sem cobertura.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Seção: Análise da Presença Digital -->
+    <section class="section">
+      <div class="container">
+        <h2><i class="fas fa-search"></i> Análise da Presença Digital Atual</h2>
+        <p>A Core Reabilitação já possui uma base sólida e está no caminho certo. Através de análises práticas, incluindo pesquisas em modo anônimo no Google (sem influência de histórico ou localização personalizada), identificamos que a clínica <strong>aparece em 5ª posição na região do Portal do Morumbi</strong>.</p>
+
+        <div class="alert alert-success">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <strong>Resultado Positivo:</strong> Para negócios locais, o posicionamento no Google e no Google Maps tem impacto direto na geração de novos pacientes. Estar na primeira página é um excelente ponto de partida.
+          </div>
+        </div>
+
+        <p>O site apresenta uma boa estrutura técnica e está posicionado de forma relevante. No entanto, <strong>com ajustes estratégicos em SEO e conteúdo</strong>, é possível sair de aproximadamente 1 visita por semana para um fluxo constante de novos pacientes.</p>
+      </div>
+    </section>
+
+    <!-- Seção: Análise Técnica do Site -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2><i class="fas fa-tachometer-alt"></i> Análise Técnica do Site</h2>
+        <p>O Google avalia a qualidade de um site com base em 4 pilares principais, atribuindo notas de 0 a 100 para cada um:</p>
+
+        <div class="grid grid-2" style="margin-top: var(--spacing-xl);">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Performance</h3>
+            <div class="progress-bar-container">
+              <div class="progress-label">
+                <span>Velocidade e Otimização</span>
+                <span><span class="score-counter" data-score="93">0</span>/100</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill progress-excellent" data-width="93">Excelente</div>
+              </div>
+            </div>
+            <p>Site rápido e otimizado, proporcionando excelente experiência ao usuário.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-universal-access"></i>
+            </div>
+            <h3>Acessibilidade</h3>
+            <div class="progress-bar-container">
+              <div class="progress-label">
+                <span>Usabilidade Inclusiva</span>
+                <span><span class="score-counter" data-score="90">0</span>/100</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill progress-excellent" data-width="90">Excelente</div>
+              </div>
+            </div>
+            <p>Ótima acessibilidade para diferentes tipos de usuários e dispositivos.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Best Practices</h3>
+            <div class="progress-bar-container">
+              <div class="progress-label">
+                <span>Boas Práticas Técnicas</span>
+                <span><span class="score-counter" data-score="54">0</span>/100</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill progress-moderate" data-width="54">Moderado</div>
+              </div>
+            </div>
+            <p>Pontuação que indica oportunidades de melhoria em segurança e estabilidade.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-search-plus"></i>
+            </div>
+            <h3>SEO</h3>
+            <div class="progress-bar-container">
+              <div class="progress-label">
+                <span>Otimização para Buscas</span>
+                <span><span class="score-counter" data-score="82">0</span>/100</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill progress-good" data-width="82">Bom</div>
+              </div>
+            </div>
+            <p>Boa base, mas com potencial significativo de crescimento através de otimizações.</p>
+          </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-top: var(--spacing-xl);">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Interpretação:</strong> Os números mostram que o site já possui uma base técnica muito boa, principalmente em performance e acessibilidade. Por outro lado, existem pontos estratégicos de melhoria, especialmente em <strong>SEO e Best Practices</strong>, fundamentais para aumentar o alcance e atrair mais pacientes de forma orgânica.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: O que isso significa na prática -->
+    <section class="section">
+      <div class="container">
+        <h2><i class="fas fa-lightbulb"></i> O Que Isso Significa na Prática?</h2>
+        
+        <div class="comparison-container">
+          <div class="problem-column">
+            <h4><i class="fas fa-times-circle"></i> Situação Atual</h4>
+            <ul class="problem-list">
+              <li>Volume de acessos baixo (cerca de 1 visitante por semana)</li>
+              <li>Site não está otimizado para transformar buscas em visitas recorrentes</li>
+              <li>Potencial não está sendo totalmente aproveitado</li>
+              <li>Palavras-chave estratégicas mal distribuídas no conteúdo</li>
+            </ul>
+          </div>
+
+          <div class="solution-column">
+            <h4><i class="fas fa-check-circle"></i> Com Otimizações</h4>
+            <ul class="solution-list">
+              <li>Aumento significativo no volume de acessos orgânicos</li>
+              <li>Fluxo constante de novos pacientes</li>
+              <li>Melhor posicionamento nas buscas locais</li>
+              <li>Google entende melhor o site e prioriza ele nas buscas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alert alert-warning">
+          <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <strong>Ponto de Atenção:</strong> O site já aparece nas buscas, mas ainda não está captando todo o volume de oportunidades disponíveis. Com os ajustes corretos, é possível transformá-lo em uma fonte constante de novos pacientes.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: O que é SEO -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2><i class="fas fa-rocket"></i> O Que é SEO e Por Que Isso Importa?</h2>
+        <p><strong>SEO (Search Engine Optimization)</strong> é o conjunto de estratégias que ajudam o site a aparecer melhor posicionado no Google.</p>
+
+        <div class="grid grid-3" style="margin-top: var(--spacing-xl);">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h4>Aumenta Visibilidade</h4>
+            <p>Seu site aparece entre os primeiros resultados quando pacientes pesquisam por serviços de fisioterapia.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4>Atrai Mais Visitas</h4>
+            <p>Mais pessoas encontram e acessam o site da Core, aumentando as chances de conversão.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h4>Gera Novos Pacientes</h4>
+            <p>Transforma visitas em agendamentos, trazendo novos pacientes de forma orgânica e sustentável.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: var(--spacing-xl);">Exemplos de Buscas que Devem Encontrar a Core:</h3>
+        <ul class="feature-list">
+          <li>"fisioterapia no Portal do Morumbi"</li>
+          <li>"reabilitação física perto de mim"</li>
+          <li>"fisioterapia esportiva São Paulo"</li>
+          <li>"tratamento de lesões esportivas"</li>
+          <li>"fisioterapeuta especializado em atletas"</li>
+        </ul>
+
+        <h3 style="margin-top: var(--spacing-xl);">O Que Pode Ser Melhorado no SEO:</h3>
+        <ul class="feature-list">
+          <li>Melhor uso de palavras-chave estratégicas</li>
+          <li>Estrutura correta de títulos (H1, H2, H3)</li>
+          <li>Conteúdo mais direcionado para o público da clínica</li>
+          <li>Ajustes para aumentar a relevância local no Google</li>
+          <li>Comunicação mais clara e persuasiva para o paciente</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Seção: Palavras-Chave Estratégicas -->
+    <section class="section">
+      <div class="container">
+        <h2><i class="fas fa-key"></i> Oportunidade de Melhoria: Palavras-Chave Estratégicas</h2>
+        <p>Atualmente, o site <strong>não explora de forma consistente</strong> termos que os pacientes realmente pesquisam no Google. Isso impacta diretamente no resultado.</p>
+
+        <div class="alert alert-danger">
+          <i class="fas fa-exclamation-circle"></i>
+          <div>
+            <strong>Problema Identificado:</strong> Se as palavras-chave corretas não estão bem aplicadas no site, o Google simplesmente não prioriza ele — mesmo que o serviço seja excelente.
+          </div>
+        </div>
+
+        <!-- Accordion para cada categoria -->
+        <div class="accordion-module">
+          <div class="accordion-header">
+            <div class="module-icon-large">
+              <i class="fas fa-running"></i>
+            </div>
+            <div class="module-title-area">
+              <h3>Área Esportiva e Performance</h3>
+              <p>Posiciona a Core como referência para atletas e retorno ao esporte</p>
+            </div>
+            <div class="accordion-chevron">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul class="keyword-list">
+                <li>Reabilitação esportiva</li>
+                <li>Fisioterapia para atletas</li>
+                <li>Recuperação atlética</li>
+                <li>Fisioterapia esportiva</li>
+                <li>Prevenção de lesões</li>
+                <li>Desempenho esportivo</li>
+                <li>Performance atlética</li>
+                <li>Condicionamento físico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-module">
+          <div class="accordion-header">
+            <div class="module-icon-large">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="module-title-area">
+              <h3>Tratamento de Lesões e Dores</h3>
+              <p>Para o público que está com dor e precisa de solução imediata</p>
+            </div>
+            <div class="accordion-chevron">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul class="keyword-list">
+                <li>Tratamento de lesões</li>
+                <li>Fisioterapia para lesões</li>
+                <li>Recuperação funcional</li>
+                <li>Tratamento de dores crônicas</li>
+                <li>Mobilidade e desempenho</li>
+                <li>Dor lombar fisioterapia</li>
+                <li>Fisioterapia para joelho</li>
+                <li>Tratamento de bursite</li>
+                <li>Paralisia de Bell</li>
+                <li>Dor na mandíbula (ATM)</li>
+                <li>Neuroma de Morton</li>
+                <li>Luxações</li>
+                <li>Dores no pescoço</li>
+                <li>Água no joelho</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-module">
+          <div class="accordion-header">
+            <div class="module-icon-large">
+              <i class="fas fa-procedures"></i>
+            </div>
+            <div class="module-title-area">
+              <h3>Pós-Cirúrgico e Reabilitação</h3>
+              <p>Público com alta intenção de contratação</p>
+            </div>
+            <div class="accordion-chevron">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul class="keyword-list">
+                <li>Recuperação pós-cirúrgica</li>
+                <li>Fisioterapia pós-operatória</li>
+                <li>Reabilitação após cirurgia</li>
+                <li>Pós-operatório fisioterapia</li>
+                <li>Recuperação cirúrgica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-module">
+          <div class="accordion-header">
+            <div class="module-icon-large">
+              <i class="fas fa-bone"></i>
+            </div>
+            <div class="module-title-area">
+              <h3>Ortopedia e Estrutura Corporal</h3>
+              <p>Tratamentos especializados em estrutura óssea e articular</p>
+            </div>
+            <div class="accordion-chevron">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul class="keyword-list">
+                <li>Fisioterapia ortopédica</li>
+                <li>Tratamento ortopédico</li>
+                <li>Reabilitação óssea</li>
+                <li>Fisioterapia para coluna</li>
+                <li>Problemas articulares</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-module">
+          <div class="accordion-header">
+            <div class="module-icon-large">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="module-title-area">
+              <h3>Posicionamento Local (Muito Importante)</h3>
+              <p>Fortalece posicionamento no Google Maps e buscas locais</p>
+            </div>
+            <div class="accordion-chevron">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <ul class="keyword-list">
+                <li>Fisioterapeuta em São Paulo</li>
+                <li>Fisioterapia SP</li>
+                <li>Clínica de fisioterapia Portal do Morumbi</li>
+                <li>Centro de reabilitação São Paulo</li>
+                <li>Fisioterapia zona sul SP</li>
+                <li>Fisioterapia perto de mim</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: var(--spacing-xl);">Aplicação Prática:</h3>
+        <div class="alert alert-success">
+          <i class="fas fa-lightbulb"></i>
+          <div>
+            <strong>Exemplo de Aplicação:</strong> "Alivie dores no joelho com tratamentos fisioterapêuticos eficazes que promovem mobilidade e qualidade de vida na região do Portal do Morumbi."
+            <br><br>
+            Esse tipo de texto estratégico combina palavras-chave (dores no joelho, fisioterapia, mobilidade) + localização (Portal do Morumbi) + benefício claro (qualidade de vida).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Best Practices -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2><i class="fas fa-tools"></i> O Que São Best Practices?</h2>
+        <p><strong>Best Practices (Boas Práticas)</strong> são padrões técnicos que garantem que o site funcione de forma segura, confiável e eficiente.</p>
+
+        <p>A pontuação de <strong>54/100</strong> não significa que o site está ruim, mas sim que existem ajustes técnicos que podem melhorar:</p>
+
+        <div class="grid grid-2" style="margin-top: var(--spacing-lg);">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h4>Segurança do Site</h4>
+            <p>Implementação de certificados SSL, proteção contra vulnerabilidades e práticas de segurança web.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <h4>Estabilidade de Funcionamento</h4>
+            <p>Garantir que todas as funcionalidades operem consistentemente em diferentes situações.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h4>Compatibilidade</h4>
+            <p>Funcionamento adequado em diferentes dispositivos, navegadores e tamanhos de tela.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4>Confiança do Google</h4>
+            <p>Sites que seguem as melhores práticas recebem maior confiança e prioridade nos rankings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Resumo Estratégico -->
+    <section class="section">
+      <div class="container">
+        <h2><i class="fas fa-bullseye"></i> Resumo Estratégico</h2>
+        
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Importante:</strong> O site não precisa ser refeito. Ele precisa ser melhor direcionado.
+          </div>
+        </div>
+
+        <div class="grid grid-3" style="margin-top: var(--spacing-xl);">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h4>Base Sólida</h4>
+            <p>A Core já tem uma boa estrutura técnica e já aparece nas buscas. Isso é um ótimo ponto de partida.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h4>Ajustes Estratégicos</h4>
+            <p>Com otimizações em SEO + conteúdo estratégico, é possível multiplicar os resultados significativamente.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h4>Fluxo Constante</h4>
+            <p>Sair de ~1 visita por semana para um fluxo constante de novos pacientes vindos do Google.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+          <h3>Próximos Passos</h3>
+          <p style="max-width: 800px; margin: var(--spacing-md) auto;">Com os ajustes identificados, o Google passará a entender melhor o site, o posicionamento melhorará, o volume de acessos aumentará e, principalmente, mais pacientes começarão a chegar de forma orgânica.</p>
+          <a href="https://wa.me/5511942616650" target="_blank" class="btn btn-primary" style="margin-top: var(--spacing-md);">
+            <i class="fab fa-whatsapp"></i> Solicitar Consultoria Completa
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>InnovaSfera Tecnologia</h3>
+          <p>Transformando ideias em soluções digitais</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/innova-sfera/about/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/innovasfera/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5511942616650" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <p><i class="fas fa-globe"></i> <a href="https://www.innovasfera.com.br/" target="_blank" style="color: inherit;">www.innovasfera.com.br</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511942616650" target="_blank" style="color: inherit;">(11) 94261-6650</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Redes Sociais</h4>
+          <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/innovasfera/" target="_blank" style="color: inherit;">@innovasfera</a></p>
+          <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/company/innova-sfera/about/?viewAsMember=true" target="_blank" style="color: inherit;">InnovaSfera</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 InnovaSfera Tecnologia. Todos os direitos reservados.</p>
+        <p class="footer-badge">
+          <span class="badge-text">Powered by</span>
+          <strong>InnovaSfera</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const module = header.parentElement;
+        module.classList.toggle('active');
+      });
+    });
+
+    // Progress bars + contador animado sincronizados via IntersectionObserver
+    const progressFills = document.querySelectorAll('.progress-fill[data-width]');
+
+    // Inicializa todas as barras com width: 0 antes de qualquer animação
+    progressFills.forEach(bar => {
+      bar.style.width = '0%';
+    });
+
+    function animateCounter(counterEl, targetValue, duration) {
+      const start = performance.now();
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // easing idêntico ao da barra (ease-out cúbico)
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * targetValue);
+        counterEl.textContent = current;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          counterEl.textContent = targetValue;
+          counterEl.classList.add('score-done');
+          // remove a classe após a animação para poder reusar se necessário
+          counterEl.addEventListener('animationend', () => {
+            counterEl.classList.remove('score-done');
+          }, { once: true });
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    const scoreObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const bar = entry.target;
+        const targetWidth = bar.getAttribute('data-width');
+
+        // Anima a barra
+        bar.style.width = targetWidth + '%';
+
+        // Anima o contador correspondente
+        const container = bar.closest('.progress-bar-container');
+        const counter = container ? container.querySelector('.score-counter') : null;
+        if (counter) {
+          const scoreTarget = parseInt(counter.getAttribute('data-score'), 10);
+          animateCounter(counter, scoreTarget, 1200);
+        }
+
+        scoreObserver.unobserve(bar);
+      });
+    }, { threshold: 0.4 });
+
+    // Registra cada barra no observer
+    progressFills.forEach(bar => scoreObserver.observe(bar));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Hero insights — animação de entrada escalonada
+    const insightCards = document.querySelectorAll('.insight-card');
+
+    if ('IntersectionObserver' in window) {
+      const insightObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            insightObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      insightCards.forEach(card => insightObserver.observe(card));
+    } else {
+      // fallback sem suporte a IntersectionObserver
+      insightCards.forEach(card => card.classList.add('animate-in'));
+    }
+  </script>
+</body>
+</html>
