@@ -911,74 +911,163 @@
       }
 
       /* ========== RESPONSIVE ========== */
+
+      /* --- 768px: tablets e maioria dos smartphones --- */
       @media (max-width: 768px) {
-        h1 {
+        /* Tipografia */
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.75rem; }
+        h3 { font-size: 1.5rem; }
+
+        /* Container com padding menor */
+        .container {
+          padding: 0 var(--spacing-sm);
+        }
+
+        /* Header */
+        .logo-img {
+          width: 36px;
+          height: 36px;
+          flex-shrink: 0;
+        }
+        .header-title {
+          font-size: 1rem;
+          white-space: normal;
+          word-break: break-word;
+        }
+
+        /* Hero */
+        .hero h1 {
           font-size: 2rem;
         }
-        h2 {
-          font-size: 1.75rem;
-        }
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        .hero h1 {
-          font-size: 2.25rem;
-        }
         .hero .subtitle {
-          font-size: 1.125rem;
+          font-size: 1rem;
+        }
+        .hero-stats {
+          flex-direction: column;
+          align-items: center;
+          gap: var(--spacing-md);
+        }
+        .stat-card {
+          width: 100%;
+          max-width: 320px;
+          min-width: unset;
         }
 
-        .comparison-container {
-          grid-template-columns: 1fr;
-        }
-
+        /* Grids */
+        .comparison-container,
         .grid-2,
         .grid-3,
         .grid-4 {
           grid-template-columns: 1fr;
         }
 
+        /* Accordion */
         .accordion-header {
           padding: var(--spacing-md);
+          gap: var(--spacing-sm);
         }
-
         .module-icon-large {
-          width: 48px;
-          height: 48px;
-          font-size: 1.5rem;
+          width: 44px;
+          height: 44px;
+          font-size: 1.25rem;
+        }
+        .module-title-area h3 {
+          font-size: 1.125rem;
         }
 
-        body::before {
-          width: 300px;
-          height: 300px;
-        }
-
-        .hero-stats {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .stat-card {
-          width: 100%;
-          max-width: 300px;
-        }
-
+        /* Keywords */
         .keyword-list {
           grid-template-columns: 1fr;
         }
 
+        /* Footer */
         .footer-content {
           grid-template-columns: 1fr;
           text-align: center;
         }
-
         .footer-section p {
+          justify-content: center;
+          word-break: break-all;
+        }
+        .footer-social {
           justify-content: center;
         }
 
-        .footer-social {
-          justify-content: center;
+        /* Botão CTA */
+        .btn {
+          width: 100%;
+          display: block;
+          padding: 0.875rem 1rem;
+        }
+
+        /* Watermark menor */
+        body::before {
+          width: 220px;
+          height: 220px;
+        }
+      }
+
+      /* --- 480px: smartphones pequenos (iPhone SE, Galaxy A) --- */
+      @media (max-width: 480px) {
+        /* Tipografia ainda menor */
+        h1 { font-size: 1.75rem; }
+        h2 { font-size: 1.5rem; }
+        h3 { font-size: 1.25rem; }
+        p  { font-size: 1rem; }
+
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+        .hero .subtitle {
+          font-size: 0.95rem;
+        }
+
+        /* Stats do hero: número menor para não vazar */
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        /* Header: esconde o logo-img em telas muito pequenas para não comprimir o título */
+        .logo-img {
+          display: none;
+        }
+        .header-title {
+          font-size: 0.95rem;
+        }
+
+        /* Progress bar label: empilha em vez de side-by-side quando muito estreito */
+        .progress-label {
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        /* Insight cards: ícone menor */
+        .insight-icon {
+          font-size: 1.1rem;
+        }
+        .insight-text {
+          font-size: 0.875rem;
+        }
+
+        /* Accordion: título menor */
+        .module-title-area h3 {
+          font-size: 1rem;
+        }
+        .module-title-area p {
+          font-size: 0.85rem;
+        }
+
+        /* Sections com menos padding vertical */
+        .section {
+          padding: var(--spacing-xl) 0;
+        }
+
+        /* Alert */
+        .alert {
+          flex-direction: column;
+          gap: var(--spacing-sm);
+          padding: var(--spacing-md);
         }
       }
 
